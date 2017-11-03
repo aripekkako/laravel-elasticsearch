@@ -36,12 +36,5 @@ class LumenServiceProvider extends BaseServiceProvider
         });
         
         $app->alias('elasticsearch', LumenManager::class);
-
-        $this->withFacades();
-    }
-
-    protected function withFacades()
-    {
-        class_alias('\Cviebrock\LaravelElasticsearch\Facade', 'Elasticsearch');
     }
 }
